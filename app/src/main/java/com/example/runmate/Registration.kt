@@ -7,12 +7,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-
-
 
 class Registration : AppCompatActivity() {
 
@@ -47,6 +46,7 @@ class Registration : AppCompatActivity() {
         back_btn.setOnClickListener {
             intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
+            finish()
         }
 
         //If every field is correctly compiled, an account will be created.
@@ -99,6 +99,7 @@ class Registration : AppCompatActivity() {
 
                         intent = Intent(applicationContext, TargetActivity::class.java)
                         startActivity(intent)
+                        finish()
                     } else Toast.makeText(
                         baseContext,
                         "Registrazione fallita.",
@@ -108,6 +109,13 @@ class Registration : AppCompatActivity() {
                 regTrace.stop()
             }
 
+            // overrides default back button behavior
+            val onBackPressedCallback = object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    return
+                }
+            }
+            onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
         }
     }
 

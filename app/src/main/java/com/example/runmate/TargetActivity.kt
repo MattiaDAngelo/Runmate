@@ -206,6 +206,7 @@ class TargetActivity: AppCompatActivity() {
                     setUserProperties(applicationContext, analytics)
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
                 1 -> Toast.makeText(this, "Numero di metri non valido, inserisci un valore tra 1 e 30000", Toast.LENGTH_SHORT).show()
                 2 -> Toast.makeText(this, "Numero di calorie non valido, inserisci un valore tra 1 e 5000", Toast.LENGTH_SHORT).show()
