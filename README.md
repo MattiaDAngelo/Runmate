@@ -11,4 +11,4 @@ Utilizza **Google Firebase** per la raccolta di dati telemetrici.
 
 * [Mattia D'Angelo](https://github.com/MattiaDAngelo)
 * [Damiano Salvaterra](https://github.com/DaMole98)
-* [Giuseppe vivaldi](https://github.com/VVLGPP)
+* [Giuseppe Vivaldi](https://github.com/VVLGPP)
