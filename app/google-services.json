@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "25240349463",
+    "project_id": "runmate-b7137",
+    "storage_bucket": "runmate-b7137.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25240349463:android:20fdcda1a2ee52f8f2e552",
+        "android_client_info": {
+          "package_name": "com.example.runmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25240349463-631vlfsh6notd5hrvqt88o01nhrp0fbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBspfC0V-nr3MhTK7Uh7Hta2s2enZJffYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25240349463-631vlfsh6notd5hrvqt88o01nhrp0fbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
