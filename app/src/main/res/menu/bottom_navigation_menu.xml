@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/stats"
+        android:enabled="true"
+        android:icon="@drawable/stats_icon"
+        android:title="@string/StatsB" />
+    <item
+        android:id="@+id/training"
+        android:enabled="true"
+        android:icon="@drawable/training_icon"
+        android:title="@string/TrainingB" />
+    <item
+        android:id="@+id/user"
+        android:enabled="true"
+        android:icon="@drawable/user_icon"
+        android:title="@string/ProfileB" />
+
+</menu>

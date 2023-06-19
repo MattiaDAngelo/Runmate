@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/userTopView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toTopOf="@id/userBottomview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/profileTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profilo"
+        android:textColor="@color/runmate_green"
+        android:fontFamily="@font/rubik"
+        android:padding="10sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="30sp"
+        android:layout_marginHorizontal="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/userTopView"
+        app:layout_constraintBottom_toTopOf="@id/user_view"
+        />
+
+    <View
+        android:id="@+id/userBottomview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toBottomOf="@id/btn_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_view" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="1dp"
+        android:background="@drawable/round_bottom_border_layout"
+        android:fontFamily="@font/rubik"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/logout"
+        android:textAlignment="textStart"
+        android:textColor="#D01414"
+        android:verticalScrollbarPosition="defaultPosition"
+        app:layout_constraintEnd_toEndOf="@id/userBottomview"
+        app:layout_constraintStart_toStartOf="@id/userBottomview"
+        app:layout_constraintTop_toBottomOf="@id/btn_username" />
+
+    <Button
+        android:id="@+id/btn_target"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/round_top_border_layout"
+        android:text="@string/dettagli_utente"
+        android:fontFamily="@font/rubik"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/userBottomview"
+        app:layout_constraintStart_toStartOf="@id/userBottomview"
+        app:layout_constraintTop_toTopOf="@id/userBottomview"
+        />
+
+    <Button
+        android:id="@+id/btn_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="1dp"
+        android:background="@color/white"
+        android:fontFamily="@font/rubik"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/modifica_username"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@id/btn_logout"
+        app:layout_constraintEnd_toEndOf="@id/userBottomview"
+        app:layout_constraintStart_toStartOf="@id/userBottomview"
+        app:layout_constraintTop_toBottomOf="@id/btn_target" />
+
+    <TextView
+        android:id="@+id/user_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/benvenuto_user"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="10sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginHorizontal="30sp"
+        android:fontFamily="@font/rubik_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTextView"
+        />
+
+    <Button
+        android:id="@+id/btn_delete_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="1dp"
+        android:background="@color/white"
+        android:fontFamily="@font/rubik"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/cancella_account"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/btn_username"
+        app:layout_constraintEnd_toEndOf="@id/userBottomview"
+        app:layout_constraintStart_toStartOf="@id/userBottomview"
+        app:layout_constraintTop_toBottomOf="@id/btn_target" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/v_training_type"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/layout_bg_green"
+        app:layout_constraintBottom_toTopOf="@+id/stepsCircle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_training_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/camminata"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/v_training_type"
+        app:layout_constraintEnd_toEndOf="@+id/v_training_type"
+        app:layout_constraintStart_toStartOf="@+id/v_training_type"
+        app:layout_constraintTop_toTopOf="@+id/v_training_type" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/passi"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_steps_train"
+        app:layout_constraintEnd_toEndOf="@+id/stepsCircle"
+        app:layout_constraintStart_toStartOf="@+id/stepsCircle"
+        app:layout_constraintTop_toTopOf="@+id/stepsCircle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/distanza"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/distanceCircle"
+        app:layout_constraintEnd_toEndOf="@+id/distanceCircle"
+        app:layout_constraintStart_toStartOf="@+id/distanceCircle"
+        app:layout_constraintTop_toTopOf="@+id/distanceCircle"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/calorie"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/caloriesCircle"
+        app:layout_constraintEnd_toEndOf="@+id/caloriesCircle"
+        app:layout_constraintStart_toStartOf="@+id/caloriesCircle"
+        app:layout_constraintTop_toTopOf="@+id/caloriesCircle"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/tv_steps_train"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/stepsCircle"
+        app:layout_constraintEnd_toEndOf="@+id/stepsCircle"
+        app:layout_constraintStart_toStartOf="@+id/stepsCircle" />
+
+    <TextView
+        android:id="@+id/tv_distance_train"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/distanceCircle"
+        app:layout_constraintEnd_toEndOf="@+id/distanceCircle"
+        app:layout_constraintStart_toStartOf="@+id/distanceCircle"
+        app:layout_constraintTop_toTopOf="@+id/distanceCircle"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="m"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/distanceCircle"
+        app:layout_constraintEnd_toEndOf="@+id/distanceCircle"
+        app:layout_constraintStart_toStartOf="@+id/distanceCircle"
+        app:layout_constraintTop_toTopOf="@+id/distanceCircle"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/tv_calories_train"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/caloriesCircle"
+        app:layout_constraintEnd_toEndOf="@+id/caloriesCircle"
+        app:layout_constraintStart_toStartOf="@+id/caloriesCircle"
+        app:layout_constraintTop_toTopOf="@+id/caloriesCircle"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/kcal"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/caloriesCircle"
+        app:layout_constraintEnd_toEndOf="@+id/caloriesCircle"
+        app:layout_constraintStart_toStartOf="@+id/caloriesCircle"
+        app:layout_constraintTop_toTopOf="@+id/caloriesCircle"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/stepsCircle"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/training_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/distanceCircle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/training_circle"
+        app:layout_constraintEnd_toStartOf="@+id/caloriesCircle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stepsCircle"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/caloriesCircle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/training_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/distanceCircle"
+        app:layout_constraintTop_toBottomOf="@+id/stepsCircle"
+        android:importantForAccessibility="no" />
+
+    <View
+        android:id="@+id/v_chrono"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distanceCircle" />
+
+    <Chronometer
+        android:id="@+id/chronometer_train"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format="00:00:00"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/v_chrono"
+        app:layout_constraintEnd_toEndOf="@id/v_chrono"
+        app:layout_constraintStart_toStartOf="@id/v_chrono"
+        app:layout_constraintTop_toTopOf="@id/v_chrono" />
+
+    <ImageButton
+        android:id="@+id/btn_play_pause_train"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/v_chrono"
+        app:layout_constraintEnd_toStartOf="@+id/chronometer_train"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@id/v_chrono"
+        app:layout_constraintTop_toTopOf="@id/v_chrono"
+        app:srcCompat="@drawable/play_circle"
+        android:importantForAccessibility="no" />
+
+    <ImageButton
+        android:id="@+id/btn_stop_train"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/v_chrono"
+        app:layout_constraintEnd_toEndOf="@id/v_chrono"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/chronometer_train"
+        app:layout_constraintTop_toTopOf="@id/v_chrono"
+        app:srcCompat="@drawable/stop_circle"
+        android:importantForAccessibility="no" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

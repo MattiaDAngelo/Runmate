@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/v_stats"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/v_activities"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v_stats" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_steps_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:progress="100"
+        app:indicatorColor="@color/circular_progress_bar_background"
+        app:indicatorSize="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/v_stats"
+        app:layout_constraintEnd_toEndOf="@id/v_stats"
+        app:layout_constraintStart_toStartOf="@id/v_stats"
+        app:layout_constraintTop_toTopOf="@id/v_stats"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:trackCornerRadius="5dp"
+        app:trackThickness="10dp"
+        tools:progress="100" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_steps_foreground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        app:indicatorColor="@color/steps"
+        app:indicatorSize="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/pb_steps_background"
+        app:layout_constraintEnd_toEndOf="@id/pb_steps_background"
+        app:layout_constraintStart_toStartOf="@id/pb_steps_background"
+        app:layout_constraintTop_toTopOf="@id/pb_steps_background"
+        app:trackCornerRadius="5dp"
+        app:trackThickness="10dp"
+        tools:progress="100" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:progress="100"
+        app:indicatorColor="@color/circular_progress_bar_background"
+        app:indicatorSize="75dp"
+        app:layout_constraintBottom_toBottomOf="@id/pb_steps_background"
+        app:layout_constraintEnd_toEndOf="@id/pb_steps_background"
+        app:layout_constraintStart_toStartOf="@id/pb_steps_background"
+        app:layout_constraintTop_toTopOf="@id/pb_steps_background"
+        app:trackCornerRadius="5dp"
+        app:trackThickness="10dp"
+        tools:progress="100" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_distance_foreground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        app:indicatorColor="@color/distance"
+        app:indicatorSize="75dp"
+        app:layout_constraintBottom_toBottomOf="@id/pb_steps_background"
+        app:layout_constraintEnd_toEndOf="@id/pb_steps_background"
+        app:layout_constraintStart_toStartOf="@id/pb_steps_background"
+        app:layout_constraintTop_toTopOf="@id/pb_steps_background"
+        app:trackCornerRadius="5dp"
+        app:trackThickness="10dp"
+        tools:progress="100" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:progress="100"
+        app:indicatorColor="@color/circular_progress_bar_background"
+        app:indicatorSize="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/pb_steps_background"
+        app:layout_constraintEnd_toEndOf="@id/pb_steps_background"
+        app:layout_constraintStart_toStartOf="@id/pb_steps_background"
+        app:layout_constraintTop_toTopOf="@id/pb_steps_background"
+        app:trackCornerRadius="5dp"
+        app:trackThickness="10dp"
+        tools:progress="100" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pb_calories_foreground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        app:indicatorColor="@color/calories"
+        app:indicatorSize="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/pb_steps_background"
+        app:layout_constraintEnd_toEndOf="@id/pb_steps_background"
+        app:layout_constraintStart_toStartOf="@id/pb_steps_background"
+        app:layout_constraintTop_toTopOf="@id/pb_steps_background"
+        app:trackCornerRadius="5dp"
+        app:trackThickness="10dp"
+        tools:progress="100" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_stats_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_steps_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0 / 0 passi"
+        android:textColor="@color/default_stats"
+        app:layout_constraintBottom_toBottomOf="@id/v_stats"
+        app:layout_constraintEnd_toEndOf="@id/v_stats"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_stats_text"
+        app:layout_constraintTop_toTopOf="@id/v_stats"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/tv_distance_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0 / 0 m"
+        android:textColor="@color/default_stats"
+        app:layout_constraintBottom_toBottomOf="@id/v_stats"
+        app:layout_constraintEnd_toEndOf="@id/v_stats"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_stats_text"
+        app:layout_constraintTop_toTopOf="@id/v_stats"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_calories_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0 / 0 kcal"
+        android:textColor="@color/default_stats"
+        app:layout_constraintBottom_toBottomOf="@id/v_stats"
+        app:layout_constraintEnd_toEndOf="@id/v_stats"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_stats_text"
+        app:layout_constraintTop_toTopOf="@id/v_stats"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/tv_activities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/attività"
+        android:textColor="@color/runmate_green"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/v_activities"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/v_activities"
+        app:layout_constraintTop_toTopOf="@+id/v_activities" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_activities"
+        android:layout_width="300dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_activities"
+        app:layout_constraintEnd_toEndOf="@+id/v_activities"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/v_activities"
+        app:layout_constraintTop_toBottomOf="@+id/tv_activities"
+        app:layout_constraintVertical_bias="0.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<resources>
+    <style name="Theme.Runmate" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="colorPrimary">#33B5B5</item>
+        <item name="colorPrimaryDark">#33B5B5</item>
+        <item name="colorAccent">#33B5B5</item>
+    </style>
+
+    <style name="TargetView">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:fontFamily">@font/rubik</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingVertical">15dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+    <style name="TargetEditText">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:ems">5</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+    <style name="RegistrationEditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+</resources>

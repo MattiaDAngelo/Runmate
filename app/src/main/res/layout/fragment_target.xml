@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Dettagli utente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/editGender"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingVertical="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop"
+        app:layout_constraintStart_toEndOf="@id/textTargetGender"
+        app:layout_constraintEnd_toStartOf="@id/guidelineEnd"
+        >
+        <RadioButton android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/m"
+            android:textSize="12sp"
+            android:fontFamily="@font/rubik"
+            android:paddingEnd="20dp"
+            tools:ignore="RtlSymmetry" />
+        <RadioButton android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/f"
+            android:textSize="12sp"
+            android:fontFamily="@font/rubik"
+            android:paddingEnd="20dp"
+            tools:ignore="RtlSymmetry" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTargetHeight"
+        style="@style/TargetEditText"
+        android:text="180"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@+id/textTargetHeight"
+        app:layout_constraintTop_toBottomOf="@+id/editGender"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editTargetWeight"
+        style="@style/TargetEditText"
+        android:text="90"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@+id/textTargetWeight"
+        app:layout_constraintTop_toBottomOf="@+id/editTargetHeight"
+        android:importantForAutofill="no"
+         />
+
+    <EditText
+        android:id="@+id/editTargetSteps"
+        style="@style/TargetEditText"
+        android:text="1000"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@+id/textTargetSteps"
+        app:layout_constraintTop_toBottomOf="@+id/editTargetWeight"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editTargetKcal"
+        style="@style/TargetEditText"
+        android:text="500"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/editTargetSteps"
+        app:layout_constraintStart_toEndOf="@id/textTargetKcal"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editTargetMeter"
+        style="@style/TargetEditText"
+        android:text="2000"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/editTargetKcal"
+        app:layout_constraintStart_toEndOf="@id/textTargetMeter"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textTargetKcal"
+        android:text="@string/kcal_giornaliere"
+        style="@style/TargetView"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@id/editTargetKcal"
+        app:layout_constraintTop_toBottomOf="@id/textTargetSteps"
+        />
+
+    <TextView
+        android:id="@+id/textTargetMeter"
+        android:text="@string/metri_al_giorno"
+        style="@style/TargetView"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@id/editTargetMeter"
+        app:layout_constraintTop_toBottomOf="@id/textTargetKcal"
+        />
+
+    <TextView
+        android:id="@+id/textTargetGender"
+        style="@style/TargetView"
+        android:text="@string/sesso"
+        app:layout_constraintEnd_toStartOf="@id/editGender"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        />
+
+    <TextView
+        android:id="@+id/textTargetHeight"
+        android:text="@string/altezza_cm"
+        style="@style/TargetView"
+        app:layout_constraintEnd_toStartOf="@id/editTargetHeight"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/textTargetGender" />
+
+    <TextView
+        android:id="@+id/textTargetWeight"
+        android:text="@string/peso_kg"
+        style="@style/TargetView"
+        app:layout_constraintEnd_toStartOf="@id/editTargetWeight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/textTargetHeight" />
+
+    <TextView
+        android:id="@+id/textTargetSteps"
+        android:text="@string/passi_giornalieri"
+        style="@style/TargetView"
+        app:layout_constraintEnd_toStartOf="@id/editTargetSteps"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/textTargetWeight"
+        />
+
+    <Button
+        android:id="@+id/confirm_target_button"
+        android:text="@string/conferma"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#33B5B5"
+        android:fontFamily="@font/rubik"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+        app:layout_constraintEnd_toStartOf="@+id/reset_target_button"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/textTargetMeter" />
+
+    <Button
+        android:id="@+id/reset_target_button"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D01414"
+        android:fontFamily="@font/rubik"
+        android:text="@string/reset"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/confirm_target_button"
+        app:layout_constraintTop_toBottomOf="@+id/editTargetMeter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

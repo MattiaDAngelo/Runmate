@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop2"
+        app:srcCompat="@drawable/runmate_low_resolution_logo_color_on_transparent_background"
+        android:importantForAccessibility="no" />
+
+    <EditText
+        android:id="@+id/username"
+        android:hint="@string/hint_username"
+        style="@style/RegistrationEditText"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/email"
+        android:hint="@string/email"
+        style="@style/RegistrationEditText"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/password"
+        android:hint="@string/password"
+        style="@style/RegistrationEditText"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/confirm_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/confirm_password"
+        android:hint="@string/hint_password"
+        style="@style/RegistrationEditText"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#33B5B5"
+        android:fontFamily="@font/rubik"
+        android:text="@string/indietro"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_register"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStart2" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#33B5B5"
+        android:text="@string/registrati"
+        android:fontFamily="@font/rubik"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd2"
+        app:layout_constraintStart_toEndOf="@+id/btn_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
